@@ -1,0 +1,107 @@
+<#assign base=request.contextPath/>
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h4 class="modal-title">用户信息详情</h4>
+</div>
+<div class="modal-body">
+       <div class="modal-body">
+       		<div class="portlet-body">
+            	<div class="row">
+                	<div class="col-md-12">
+                    	<table id="user" class="table table-bordered table-striped">
+	                        <tbody>
+	                            <tr>
+	                               <td style="width:15%"> 用户编号 </td>
+	                               <td style="width:50%">
+	                                    ${(userInfo.id)!"123456"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 用户名/登录名 </td>
+	                               <td>
+	                                  ${(userInfo.username)!"123456"} 
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 密码 </td>
+	                               <td>
+	                                   ${(userInfo.password)!"123456"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 昵称 </td>
+	                               <td>
+	                                   ${(userInfo.nickname)!"chao"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 年龄 </td>
+	                               <td>
+	                                   ${(userInfo.age)!"chao"} 岁
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 性别 </td>
+	                               <td>
+	                               	${(userInfo.sex)!"1"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 职务 </td>
+	                               <td>
+	                               ${(userInfo.job)!"1"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 所在地 </td>
+	                               <td>
+	                                ${(userInfo.province)!"贵州"}
+			                    	&nbsp;
+			                    	${(userInfo.city)!"贵阳"}
+			                    	&nbsp;
+			                    	${(userInfo.district)!"开阳"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 地址 </td>
+	                               <td>
+	                                  ${(userInfo.address)!"开阳"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 权限：盐 </td>
+	                               <td>
+	                                   ${(userInfo.authSalt)!"无"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 登录IP </td>
+	                               <td>
+	                                   ${(userInfo.lastLoginIp)!"127.0.0.1"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 最近一次登录时间 </td>
+	                               <td>
+	                               ${(userInfo.lastLoginTime)!"2018-10-01"}
+	                               </td>
+	                           </tr>
+	                           <tr>
+	                               <td> 注册时间 </td>
+	                               <td>
+	                               ${(userInfo.registTime)!"2018-10-01"}
+	                                </td>
+	                            </tr>
+	                        </tbody>
+                    	</table>
+                	</div>
+            	</div>
+        	</div>
+       </div>
+       <div class="modal-footer">
+           <button type="button" class="btn default" data-dismiss="modal">关  闭</button>
+       </div>
+       
+</div>
+

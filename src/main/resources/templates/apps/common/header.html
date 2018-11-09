@@ -1,0 +1,62 @@
+<!-- 获取项目请求上下文路径 -->
+<#assign base=request.contextPath/>
+<!-- Font Awesome 样式引入 -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+        <!-- BEGIN LOGO -->
+        <!--<div class="page-logo">
+            <a href="${base}/">
+                <img src="${base}/libs/pages/img/logos/LeeCX-logo.png" alt="logo" class="logo-default" /> 
+            </a>
+            <div class="menu-toggler sidebar-toggler" style="width: 19px; height: 19px;">
+                <span style="top: 8px;"></span>
+            </div>
+        </div>-->
+       <div class="navbar-header pull-left">
+    	<a href="${base}/home" class="navbar-brand">
+        <small>
+            <i class="fa fa-leaf fa-1x"></i>
+            	日志管理系统
+        </small>
+    	</a>
+		</div>
+        <!-- END LOGO -->
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse" style="width: 19px; height: 19px;">
+            <span style="top: 8px;"></span>
+        </a>
+        <!-- END RESPONSIVE MENU TOGGLER -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <!-- BEGIN USER LOGIN DROPDOWN -->
+                <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                <li class="dropdown dropdown-user">
+                    <a href="${base}/center.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+<!--                         <img alt="" class="img-circle" src="<shiro:principal property="faceImage"/>" /> -->
+                        <span class="username username-hide-on-mobile"> <shiro:principal property="username"></shiro:principal> </span>
+<!--                         <input type="hidden" id="activeUserId" name="activeUserId" value="<shiro:principal property="userId"/>"/> -->
+                        &nbsp;
+<!--                         <i class="fa fa-angle-down"></i> -->
+                    </a>
+                </li>
+                <!-- END USER LOGIN DROPDOWN -->
+                <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                <li class="dropdown dropdown-quick-sidebar-toggler">
+                    <a href="${base}/logout.html" class="dropdown-toggle">
+                        <i class="icon-logout"></i>
+                    </a>
+                </li>
+                <!-- END QUICK SIDEBAR TOGGLER -->
+            </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+    <!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->

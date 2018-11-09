@@ -1,0 +1,66 @@
+
+1. mybatis 数据库操作异常：
+//tk.mybatis.mapper.provider.base.BaseInsertProvider
+//import org.mybatis.spring.annotation.MapperScan;
+
+2. SpringBoot启动错误原因是：
+/** springboot启动时会自动注入数据源和配置jpa 
+ * 解决：在@SpringBootApplication中排除其注入 
+ * @SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+ **/
+
+3. 主动类注解
+//@SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+
+
+4. SpringBoot整合PageHelper做多条件分页查询
+# jar包引入
+ <!-- 分页插件 -->
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>1.2.3</version>
+</dependency>
+        
+#注册Configuration插件
+/*
+ * 注册MyBatis分页插件PageHelper
+ */
+
+@Configuration
+public class MybatisConf {
+    @Bean
+    public PageHelper pageHelper() {
+        System.out.println("MyBatisConfiguration.pageHelper()");
+        PageHelper pageHelper = new PageHelper();
+        Properties p = new Properties();
+        p.setProperty("offsetAsPageNum", "true");
+        p.setProperty("rowBoundsWithCount", "true");
+        p.setProperty("reasonable", "true");
+        pageHelper.setProperties(p);
+        return pageHelper;
+    }
+}
+
+
+# 做带条件分页最好是Map，因为特别容易整合智能标签，它的多条件就是Map传进来的
+
+
+
+# SpringBoot默认不支持JSP，如果想在项目中使用，需要进行相关初始化工作。
+# SpringBoot+War+JSP .pringBoot 添加对JSP的支持
+常见问题：
+1.修改JSP需重启才能生效:
+在生产环境中，SpringBoot重新编译JSP可能会导致较大的性能损失，
+并且很难追查到问题根源，所以在最新的版本中，官方已经默认关闭此功能，详见JspServlet类的初始化参数。
+那么，如何解决这个问题呢？
+推荐两个解决办法：
+1.使用devtools 
+2. 添加配置（server.servlet.jsp.init-parameters.development=true）
+2.各种404：
+1.必须导入嵌入式容器和JASPER解析器 
+2.必须创建webapp目录，webapp/WEB_INFO/jsp/index.jsp
+
+
+
+

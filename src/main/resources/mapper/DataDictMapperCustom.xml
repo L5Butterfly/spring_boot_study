@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.leecx.mapper.DataDictMapperCustom" >
+
+	 <!--自定义链表查询语句开始-->
+	 <!--分页查询-->
+    <select id="getDataDictBayCodeType" resultType="com.leecx.pojo.DataDict">
+        SELECT * from data_dict
+        <where>
+            <if test="typeName!= null and typeName!=''">
+                and type_name LIKE  '%' #{typeName} '%'
+            </if>
+            <if test="typeCode!= null and typCode!=''">
+                and type_code=#{typeCode}
+            </if>
+            <if test="iShow != null and iShow!=''">
+                and is_show=#{is_show}
+            </if>
+        </where>
+    </select>
+    
+     <!--分页查询3-->
+    <select id="getDataDictBayCodeType3" resultType="com.leecx.povo.DataDictVo">
+        SELECT * from data_dict
+        <where>
+            <if test="typeName!= null and typeName!=''">
+                and type_name LIKE  '%' #{typeName} '%'
+            </if>
+            <if test="typeCode!= null and typCode!=''">
+                and type_code=#{typeCode}
+            </if>
+            <if test="iShow != null and iShow!=''">
+                and is_show=#{is_show}
+            </if>
+        </where>
+    </select> 
+    <!--自定义链表查询语句结束-->
+</mapper>

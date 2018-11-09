@@ -1,0 +1,138 @@
+<!-- 获取项目请求上下文路径 -->
+<#assign base=request.contextPath/>
+
+<!-- BEGIN CONTAINER -->
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="200" style="padding-top: 20px">
+                <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <li class="sidebar-toggler-wrapper hide">
+                    <div class="sidebar-toggler">
+                        <span>
+                        	<!-- 未知信息 -->
+                        </span>
+                    </div>
+                </li>
+                
+               	<!-- 控制台   -->
+               	<li class="nav-item">
+                	<a href="${base}/home">
+                    	<i class="icon-home"></i>
+                        	<span class="title">首页</span>
+					</a>
+               	</li>
+               	
+              	<!-- 用户个人信息 -->
+				<li class="nav-item ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-user"></i>
+                        <span class="title">用户信息</span>
+						<span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+						<li class="nav-item ">
+                            <a href="${base}/user/showCreateUserPage.html" class="ajaxify nav-link ">
+                                <span class="title">创建用户</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="${base}/user/showUserInfoListPage.html" class="ajaxify nav-link ">
+                                <span class="title">用户列表</span>
+                            </a>
+                        </li>
+                    </ul>
+               	</li>
+               	
+               	<!-- 数据字典管理  -->
+				<li class="nav-item ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-notebook"></i>
+                        <span class="title">数据字典</span>
+						<span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+						<li class="nav-item ">
+                            <a href="${base}/dataDict/showCreateDataDictPage.html" class="ajaxify nav-link ">
+                                <span class="title">新建字典</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="${base}/dataDict/showDataDictListPage.html" class="ajaxify nav-link ">
+                                <span class="title">字典列表</span>
+                            </a>
+                        </li>
+                    </ul>
+               	</li>
+               	
+               	<!-- 商品信息  -->
+				<li class="nav-item ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-basket-loaded"></i>
+                        <span class="title">商品信息</span>
+						<span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+						<li class="nav-item ">
+                            <a href="${base}/demoItem/showCreateItemPage.html" class="ajaxify nav-link ">
+                                <span class="title">创建商品</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="${base}/demoItem/showQueryItemPage.html" class="ajaxify nav-link ">
+                                <span class="title">商品列表</span>
+                            </a>
+                        </li>
+                    </ul>
+               	</li>
+               	
+               	<!-- ApacheShiro是一个功能强大且易于使用的Java安全框架，提供了认证，授权，加密，和会话管理。 -->
+				<li class="nav-item ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="fa fa-bandcamp"></i>
+                        <span class="title">授权管理</span>
+						<span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+						<li class="nav-item ">
+                            <a href="${base}/shiroTest/shiroPage.html" class="ajaxify nav-link ">
+                                <span class="title">授权页面</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="${base}/shiroTest/clearCache.html" class="ajaxify nav-link ">
+                                <span class="title">清理缓存</span>
+                            </a>
+                        </li>
+                    </ul>
+               	</li>
+				<!-- 日志管理 -->
+				<!--  <i class="icon-basket-loaded"></i>-->
+				<li class="nav-item ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                       	<i class="fa fa-leaf fa-1x"></i> 
+                        <span class="title">日志管理</span>
+						<span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+						<li class="nav-item ">
+                            <a href="${base}/shiroTest/shiroPage.html" class="ajaxify nav-link ">
+                                <span class="title">日志查询</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="${base}/shiroTest/clearCache.html" class="ajaxify nav-link ">
+                                <span class="title">日志统计</span>
+                            </a>
+                        </li>
+                    </ul>
+               	</li>
+            </ul>
+            <!-- END SIDEBAR MENU -->
+        </div>
+        <!-- END SIDEBAR -->
+    </div>
+    <!-- END SIDEBAR -->

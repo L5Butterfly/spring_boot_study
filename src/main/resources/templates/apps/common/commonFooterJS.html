@@ -1,0 +1,111 @@
+<!-- 获取项目请求上下文路径 -->
+<#assign base=request.contextPath/>
+
+<!-- 引入资源文件----开始-->
+<!-- 引入外部css文件 -->
+
+<!--[if lt IE 9]>
+<script src="${base}/libs/global/plugins/respond.min.js"></script>
+<script src="${base}/libs/global/plugins/excanvas.min.js"></script> 
+<script src="${base}/libs/global/plugins/ie8.fix.min.js"></script> 
+<![endif]-->
+
+<input type="hidden" id="hdnContextPath" name="hdnContextPath" value="${base}"/>
+
+<!-- BEGIN CORE PLUGINS -->
+<script src="${base}/libs/global/plugins/jquery.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/bootstrap/js/bootstrap.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/js.cookie.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery.blockui.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js?v=3.1415926" type="text/javascript"></script>
+<!-- <script src="${base}/libs/global/plugins/bootstrap-switch-master/dist/js/bootstrap-switch.min.js?v=3.1415926" type="text/javascript"></script> -->
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="${base}/libs/global/plugins/moment.min.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/morris/morris.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/morris/raphael-min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/counterup/jquery.waypoints.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/counterup/jquery.counterup.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/fullcalendar/fullcalendar.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/horizontal-timeline/horizontal-timeline.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/flot/jquery.flot.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/flot/jquery.flot.resize.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/flot/jquery.flot.categories.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery.sparkline.min.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/bootstrap-select/js/bootstrap-select.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery-multi-select/js/jquery.multi-select.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/select2/js/select2.full.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery-validation/js/jquery.validate.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery-validation/js/additional-methods.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/backstretch/jquery.backstretch.min.js?v=3.1415926" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+<script src="${base}/libs/global/scripts/app.js?v=3.1415926" type="text/javascript"></script>
+<!-- END THEME GLOBAL SCRIPTS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="${base}/libs/global/plugins/jquery.form.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/pages/scripts/form-validation.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/bootstrap-sweetalert/sweetalert.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/Guriddo_jqGrid_JS_5.2.0/js/i18n/grid.locale-cn.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/Guriddo_jqGrid_JS_5.2.0/js/jquery.jqGrid.min.js?v=3.1415926" type="text/javascript"></script>
+
+<!-- <script src="${base}/libs/global/plugins/jquery-ui-1.12.1.custom/jquery-ui.min.js?v=3.1415926" type="text/javascript"></script> -->
+<!-- <script src="${base}/libs/global/plugins/jquery.jqGrid-4.4.3/js/jquery.jqGrid.min.js?v=3.1415926" type="text/javascript"></script> -->
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="${base}/libs/pages/scripts/dashboard.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/pages/scripts/ui-sweetalert.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/pages/scripts/ui-blockui.min.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/icheck/icheck.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/pages/scripts/form-icheck.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/bootstrap-modal/js/bootstrap-modal.js?v=3.1415926" type="text/javascript"></script>
+
+<script src="${base}/libs/global/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/jquery.input-ip-address-control-1.0.min.js?v=3.1415926" type="text/javascript"></script>
+
+<!-- <script src="${base}/libs/citys/js/distpicker.data.js?v=3.1415926"></script> -->
+<!-- <script src="${base}/libs/citys/js/distpicker.js?v=3.1415926"></script> -->
+<script src="${base}/libs/global/plugins/file-uploader/js/vendor/jquery.ui.widget.js?v=3.1415926"></script>
+<script src="${base}/libs/global/plugins/file-uploader/js/jquery.fileupload.js?v=3.1415926"></script>
+
+<script src="${base}/libs/global/plugins/echarts.min.js?v=3.1415926"></script>
+
+<!-- include summernote css/js-->
+<script src="${base}/libs/global/plugins/summernote/dist/summernote.js?v=3.1415926"></script>
+<script src="${base}/libs/global/plugins/summernote/lang/summernote-zh-CN.js?v=3.1415926"></script>
+
+<script src="${base}/libs/global/plugins/counterup/jquery.waypoints.min.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/global/plugins/counterup/jquery.counterup.min.js?v=3.1415926" type="text/javascript"></script>
+
+
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<!-- BEGIN 自己写的页面JS -->
+<!-- <script src="${base}/libs/pages/js/menu.js?v=3.1415926" type="text/javascript"></script> -->
+<script src="${base}/libs/pages/js/ajaxCallbackError.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/pages/js/commonJSFunction.js?v=3.1415926" type="text/javascript"></script>
+
+<!-- END 自己写的页面JS -->
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="${base}/libs/layouts/layout/scripts/layout.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/layouts/layout/scripts/demo.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/layouts/global/scripts/quick-sidebar.js?v=3.1415926" type="text/javascript"></script>
+<script src="${base}/libs/layouts/global/scripts/quick-nav.js?v=3.1415926" type="text/javascript"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<!-- 引入外部js文件 -->
+<!-- 引入资源文件----结束-->
+      
