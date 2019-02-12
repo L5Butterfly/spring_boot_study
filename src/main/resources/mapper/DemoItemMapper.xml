@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.leecx.mapper.DemoItemMapper" >
-  <resultMap id="BaseResultMap" type="com.leecx.pojo.DemoItem" >
+<mapper namespace="com.empathy.mapper.DemoItemMapper" >
+  <resultMap id="BaseResultMap" type="com.empathy.pojo.DemoItem" >
     <!--
       WARNING - @mbg.generated
     -->

@@ -2,11 +2,11 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.leecx.mapper.DataDictMapperCustom" >
+<mapper namespace="com.empathy.mapper.DataDictMapperCustom" >
 
 	 <!--自定义链表查询语句开始-->
 	 <!--分页查询-->
-    <select id="getDataDictBayCodeType" resultType="com.leecx.pojo.DataDict">
+    <select id="getDataDictBayCodeType" resultType="com.empathy.pojo.DataDict">
         SELECT * from data_dict
         <where>
             <if test="typeName!= null and typeName!=''">
@@ -22,7 +22,7 @@
     </select>
     
      <!--分页查询3-->
-    <select id="getDataDictBayCodeType3" resultType="com.leecx.povo.DataDictVo">
+    <select id="getDataDictBayCodeType3" resultType="com.empathy.povo.DataDictVo">
         SELECT * from data_dict
         <where>
             <if test="typeName!= null and typeName!=''">
